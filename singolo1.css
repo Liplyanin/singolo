@@ -1,0 +1,197 @@
+@font-face{
+    font-family: "lato-regular";
+    src: url('./assets/Lato-Regular.ttf');
+}
+@font-face{
+    font-family: "lato-bold";
+    src: url('./assets/Lato-Bold.ttf');
+}
+@font-face{
+    font-family: "lato-black";
+    src: url('./assets/Lato-Black.ttf');
+}
+@font-face{
+    font-family: "lato-light";
+    src: url('./assets/Lato-Light.ttf');
+}
+body{
+    display: flex;
+    flex-direction: column;
+    
+}
+.wrapper{
+    display: flex;
+    margin: 0 auto;
+    max-width: 1020px;
+    width: 100%;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    height: 95px;
+    background-color: #2d303a;
+}
+.header_bottom-line{
+    height: 6px;
+    background-color: #323746;
+}
+.header__content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 89px;
+}
+.header__content_logo{
+    display: flex;
+}
+.header__content_logo h1{
+    text-transform: uppercase;
+    font-family: "lato-bold";
+    color: white;
+    font-size: 25px;
+    padding-left: 8px;
+    letter-spacing: -0.5px;
+}
+.header__content_logo h1:hover{
+    color: #f06c64;
+    cursor: pointer;
+}
+.header__content_logo div{
+    font-family: "lato-bold";
+    color: #f06c64;
+    font-size: 25px;
+    margin-right: 387px;
+}
+.header__content__menu {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-right: 6px;    
+}
+.header__content__menu_item{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    color: #d5d6d8;
+    font-family: "lato-regular";
+}
+.header__content__menu_item:hover{
+    color: #f06c64;
+    cursor: pointer;
+}
+.header__content__menu_dots{
+    color: #d5d6d8;
+    opacity: 0.2;
+    width: 29px;
+    height: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider{
+    height: 600px;
+    background-color: #f06c64;
+    display: flex;
+    flex-direction: column;
+}
+.slider__content{
+    height: 594px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.slider__content_vector{
+    opacity: 0.5;
+    margin: 42px;
+}
+.slider__content_vector:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.slider__content_phone-vertical{
+    padding-right: 45px;
+    padding-bottom: 2px;
+}
+.slider__content_phone-horizontal{
+    padding-bottom: 4px;
+    padding-left: 18px;
+}
+
+.slider_bottom-line{
+    height: 6px;
+    background-color: #ea676b;;
+}
+.services{
+    height: 500px;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column  ;
+}
+.services__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 63px;
+    height: 500px;
+}
+.services__content_description{
+    width: 93%;
+}
+.services__content_description h2{
+    font-family: "lato-black";
+    color: #666d89;
+    font-size: 30px;
+    margin-left: 3px;
+}
+.services__content_description div{
+    font-family: "lato-light";
+    color: #767e9e;
+    height: 57px;
+    margin-top: 20px;
+    margin-left: 5px;
+    letter-spacing: 1.05px;
+    word-spacing: -0.2px;
+    line-height: 31px;
+
+}
+.services__content__menu{
+    display: flex;
+    flex-wrap: wrap;
+}
+.services__content__menu__item{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 39px;
+    margin-left: 58px;
+    width: 25.7%;
+}
+.services__content__menu__item img{
+    margin: 11px;
+}
+.services__content__menu__item_descr{
+    margin-left: 8px;
+    margin-bottom: 12px;
+    height: 51px;
+}
+.services__content__menu__item_descr h3{
+    font-family: "lato-black";
+    color: #666d89;
+    letter-spacing: 1px;
+    word-spacing: -0.7px;
+}
+.services__content__menu__item_descr div{
+    font-family: "lato-light";
+    word-wrap: break-word;
+    color: #767e9e;
+    font-size: 13px;
+    word-spacing: 0.33px;
+    font-weight: 400;
+    padding-top: 12px;
+    line-height: 21px;
+    width: 230px;
+}
+.services_bottom-line{
+    height: 6px;
+    background-color: #ffffff;
+}
