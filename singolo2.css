@@ -1,0 +1,156 @@
+@font-face{
+    font-family: "lato-regular";
+    src: url('./assets/Lato-Regular.ttf');
+}
+@font-face{
+    font-family: "lato-bold";
+    src: url('./assets/Lato-Bold.ttf');
+}
+@font-face{
+    font-family: "lato-black";
+    src: url('./assets/Lato-Black.ttf');
+}
+@font-face{
+    font-family: "lato-light";
+    src: url('./assets/Lato-Light.ttf');
+}
+body{
+    display: flex;
+    flex-direction: column;
+    
+}
+.wrapper{
+    display: flex;
+    margin: 0 auto;
+    max-width: 1020px;
+    width: 100%;
+}
+.portfolio{
+    display: flex;
+    flex-direction: column;
+    height: 870px;
+    background-color: #2d303a;
+}
+.portfolio__content{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 52px;
+}
+.portfolio__content__header{
+    margin-left: 9px;
+    margin-bottom: 9px;
+}
+.portfolio__content h2{
+    margin-top: 64px;
+    margin-bottom: 27px;
+    font-size: 1.9rem;
+    color: #666d89;
+    font-family: "lato-bold";
+}
+
+.portfolio__content__header_text{   
+    font-size: 1.09rem;
+    color: #767e9e;
+    font-family: "lato-regular";   
+}
+.portfolio__content__header_buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 28.5%;
+    margin-top: 16px;
+}
+.portfolio__content__header_buttons_item{
+    font-size: 0.7em;
+    padding-left: 7px;
+    padding-right: 7px;
+    height: 20.5px;
+    border: 0.1rem solid #666d89;
+    border-radius: 5px;
+    color: #767e9e;
+    font-family: "lato-regular";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.portfolio__content__header_buttons_item:hover{
+    cursor: pointer;
+    border-color: #c5c5c5;
+}
+.portfolio__content__photos{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    height: 625px;
+}
+.portfolio__content__photos img{
+    width: 221.5px;
+    height: 188px;
+    margin: 9px;
+}
+
+.portfolio_bottom-line{
+    height: 6px;
+    background-color: #323746
+}
+.abot-us{
+    background-color: #f2f2f2;
+}
+.abot-us__header{
+    display: flex;
+    flex-direction: column;
+}
+.abot-us__header h2{
+    margin-top: 60px;
+    margin-left: 8px;
+    letter-spacing: -0.8px;
+    font-size: 2em;
+    color: #666d89;
+    font-family: "lato-bold";
+    
+}
+.abot-us__header_text{
+    margin-top: 21px;
+    margin-left: 7px;
+    font-size: 1.145em;
+    width: 942px;
+    letter-spacing: 0.028px;
+    line-height: 30px;
+    color: #767e9e;
+    font-family: "lato-light";
+    margin-bottom: 35px;
+}
+.abot-us__persons_item{
+    width: 29.412%;
+    margin: 9.5px;
+}
+.abot-us__persons_item h2{
+    font-family: "lato-black";
+    color: #666d89;
+    font-size: 1.11em;
+    margin-top: 15px;
+
+}
+.abot-us__persons_item p{
+    font-size: 0.76em;
+    font-family: "lato-light";
+    line-height: 21px;
+    color: #767e9e;
+    margin-top: 10px;
+    margin-bottom: 24px;
+}
+.abot-us__persons_item_network{
+    margin-bottom: 53px;
+    
+}
+.abot-us__persons_item_network img{
+    opacity: 0.5;
+}
+.abot-us__persons_item_network img:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.abot-us_bottom-line{
+    background-color: #ffffff;
+    height: 6px;
+}
