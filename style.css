@@ -190,6 +190,8 @@ body{
     padding-top: 12px;
     line-height: 21px;
     width: 230px;
+    height: 85px;
+    overflow: hidden;
 }
 .services_bottom-line{
     height: 6px;
@@ -306,7 +308,7 @@ body{
     color: #666d89;
     font-size: 1.11em;
     margin-top: 15px;
-
+    overflow: hidden;
 }
 .abot-us__persons_item p{
     font-size: 0.76em;
@@ -476,4 +478,8 @@ input:invalid:not(:placeholder-shown) {
 }
 .footer__content__network_item{
     margin: 3px;
+    opacity: 0.5;
+}
+.footer__content__network_item:hover{
+    opacity: 1;
 }
