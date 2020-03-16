@@ -140,7 +140,7 @@ body{
     width: 334px;
     background-color: black;
     position: absolute;
-    margin-left: 374px;
+    margin-left: 372px;
     margin-top: 134px;
     display: none;
 
@@ -154,14 +154,23 @@ body{
     display: flex;
 }
 .slider__content_phone-vertical{
-    padding-right: 57px;
-    padding-bottom: 2px;
+    padding-right: 97px;
+    padding-bottom: 27px;
+ 
+}
+.slider__content_phone-vertical img{
+    box-shadow: 20px 20px 1px 5px #0002;
+    border-radius: 25px;
 }
 .slider__content_phone-horizontal{
     padding-top: 121px;
-    padding-left: 18px;
+    padding-right: 30px;
+    
 }
-
+.slider__content_phone-horizontal img{
+    box-shadow: 20px 20px 1px 5px #0002;
+    border-radius: 25px;
+}
 .slider_bottom-line{
     height: 6px;
     background-color: #ea676b;;
