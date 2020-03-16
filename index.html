@@ -11,31 +11,39 @@
     <header class="header">
         <div class="wrapper header__content">
             <div class="header__content_logo"><h1>singolo</h1><div>*</div></div>
-            <div class="header__content__menu">
-                <div class="header__content__menu_item">home</div>
+            <div class="header__content__menu" id="menu">
+                <a href="#home"> <div class="header__content__menu_item">home</div></a>
                 <div class="header__content__menu_dots" >.</div>
-                <div class="header__content__menu_item">services</div>
+                <a href="#services"> <div class="header__content__menu_item" > services</div></a>
                 <div class="header__content__menu_dots" >.</div>
-                <div class="header__content__menu_item">portfolio</div>
+                <a href="#portfolio"><div class="header__content__menu_item" > portfolio</div></a>
                 <div class="header__content__menu_dots" >.</div>
-                <div class="header__content__menu_item">about</div>
+                <a href="#about"> <div class="header__content__menu_item" > about</div></a>
                 <div class="header__content__menu_dots" >.</div>
-                <div class="header__content__menu_item">contact</div>
+                <a href="#contact"> <div class="header__content__menu_item"> contact </div></a>
             </div>
          </div>
          <div class="header_bottom-line"></div>
     </header>
     
     <div class="slider">
-        <div class="slider__content wrapper">
-            <div class="slider__content_vector"><img src="./assets/chev_left.svg" alt="left"></div>
-            <div class="slider__content_phone-vertical"><img src="./assets/iphone-vertical.png" alt="phone"></div>
-            <div class="slider__content_phone-horizontal"><img src="./assets/iphone-horizontal.png" alt="phone"></div>
-            <div class="slider__content_vector"><img src="./assets/chev_r.svg" alt="right"></div>    
+        <div class="slider__content wrapper" >
+            <a name='home'></a>
+            <div class="slider__content_vector" ><img src="./assets/chev_left.svg" alt="left" id="button_left"></div>
+                <div class="slide1 slide_active " id="slide1">
+                    <div class="black_screen1"></div>
+                    <div class="black_screen2"></div>
+                    <div class="slider__content_phone-vertical"><img src="./assets/iphone-vertical.png" alt="phone_vertical"></div>
+                    <div class="slider__content_phone-horizontal"><img src="./assets/iphone-horizontal.png" alt="phone_horizontal"></div>    
+                </div>
+                <div class="slide2" id="slide2"><img src="./assets/slide2.png" alt="slide"></div>
+            <div class="slider__content_vector" ><img src="./assets/chev_r.svg" alt="right" id="button_right"></div>    
         </div>
         <div class="slider_bottom-line"></div>
     </div>
+
     <div class="services">
+        <a name='services'></a>
         <div class="services__content wrapper">
             <div class="services__content_description"> 
                 <h2>Our Services</h2>
@@ -44,8 +52,6 @@
                       eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo,
                        tortor mauris condimentum nibh.</div>
             </div>
-
-
             <div class="services__content__menu">
                 <div class="services__content__menu__item">
                     <img src="./assets/pen.png" alt="pen">
@@ -115,6 +121,7 @@
 
     
     <div class="portfolio">
+        <a name='portfolio'></a>
         <div class="portfolio__content wrapper">
             <div class="portfolio__content__header">
                 <h2>Portfolio</h2>
@@ -139,14 +146,13 @@
                 <img src="./assets/portfolio_img10.jpeg" alt="jpeg">
                 <img src="./assets/portfolio_img11.jpeg" alt="jpeg">
                 <img src="./assets/portfolio_img12.jpeg" alt="jpeg">
-                <img src="./assets/portfolio_img10.jpeg" alt="jpeg">
-                <img src="./assets/portfolio_img11.jpeg" alt="jpeg">
-                <img src="./assets/portfolio_img12.jpeg" alt="jpeg">
             </div>
         </div>
         <div class="portfolio_bottom-line"></div>
     </div>
-    <div class="abot-us">
+
+    <div class="about-us">
+        <a name='about'></a>
         <div class="abot-us__header wrapper">
             <h2>About Us</h2>
             <div class="abot-us__header_text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</div>
@@ -200,14 +206,25 @@
         <div class="quota__main wrapper">
               <div class="quota__main_form">
                   <form action="#" >
-                      <input type="text" name="name" placeholder="Name (Required)" required>
-                      <input type="email" name="email" placeholder="Email (Required)" required>
-                      <input type="text" name="subject" placeholder="Subject">
-                      <textarea name="Describe" placeholder="Describe your project in detail..." cols="40" rows="10"></textarea>
-                      <button type="submit">Submit</button>
+                      <input id="input-name" type="text" name="name" placeholder="Name (Required)" required>
+                      <input id="input-mail" type="email" name="email" placeholder="Email (Required)" required>
+                      <input id="input-subject" type="text" name="subject" placeholder="Subject" >
+                      <textarea id="describe-area" name="describe" placeholder="Describe your project in detail..." cols="40" rows="10"></textarea>
+                      <button type="submit" id="submit-btn">Submit</button>
                   </form>
+
+                  <div class="popup ">
+                      <div class="popup_message">
+                          <p>The letter was sent </p>
+                          <span id="subject"></span>
+                          <span id="describe"></span>     
+                          <button id="close-btn">OK</button>                   
+                      </div>                     
+                  </div>
+
               </div>
               <div class="quota__main__contact-info">
+                <a name='contact'></a>
                   <h3>Contact Information</h3>
                   <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viver-ra nibh. Fusce vitae aliquam tellus. Proin
                       sit
@@ -260,6 +277,8 @@
           </div>
       </div>
   </footer>
-
+  <script src="./script.js"></script>
 </body>
+
+
 </html>
