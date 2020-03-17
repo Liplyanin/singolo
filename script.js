@@ -5,7 +5,13 @@ let mobileDark = document.querySelector('.mobile-menu_dark-part');
 
 header.addEventListener('click', (event)=>{
     header.querySelectorAll('div').forEach(el=> el.classList.remove('active'));
-    if (event.target.classList.value=='header__content__menu_item') event.target.classList.add('active'); 
+    if (event.target.classList.value=='header__content__menu_item') {
+        event.target.classList.add('active');
+        if(mobileMenu.classList.value=='header__content__mobile-menu mobile-menu__active') {
+            document.querySelector('.header__content__mobile-menu_icon').style = 'transform: rotate(90deg); top: auto; left: 30px;';
+            header.querySelectorAll('div').forEach(el=> el.classList.remove('mobile-menu__active'));
+        }
+    }
 
     if (event.target.classList.value=='header__content__mobile-menu_icon' && mobileMenu.classList.value=='header__content__mobile-menu') {
         event.target.style = 'transform: rotate(180deg); top: 0; left: 0;';
@@ -15,8 +21,8 @@ header.addEventListener('click', (event)=>{
 
     }else if(event.target.classList.value=='header__content__mobile-menu_icon'&&mobileMenu.classList.value=='header__content__mobile-menu mobile-menu__active'){
         event.target.style = 'transform: rotate(90deg); top: auto; left: 30px;';
-        mobileMenu.classList.remove('mobile-menu__active');
-        mobileDark.classList.remove('mobile-menu__active');
+        header.querySelectorAll('div').forEach(el=> el.classList.remove('mobile-menu__active'));
+   
         
     }
     console.log(mobileMenu.classList.value=='header__content__mobile-menu mobile-menu__active')
