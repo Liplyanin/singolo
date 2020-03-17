@@ -1,9 +1,29 @@
+let header = document.querySelector('.header');
 let menu = document.getElementById('menu');
-menu.addEventListener('click', (event)=>{
-    menu.querySelectorAll('div').forEach(el=> el.classList.remove('active'));
-   if (event.target.classList.value=='header__content__menu_item') event.target.classList.add('active'); 
-   
+let mobileMenu = document.querySelector('.header__content__mobile-menu');
+let mobileDark = document.querySelector('.mobile-menu_dark-part');
+
+header.addEventListener('click', (event)=>{
+    header.querySelectorAll('div').forEach(el=> el.classList.remove('active'));
+    if (event.target.classList.value=='header__content__menu_item') event.target.classList.add('active'); 
+
+    if (event.target.classList.value=='header__content__mobile-menu_icon' && mobileMenu.classList.value=='header__content__mobile-menu') {
+        event.target.style = 'transform: rotate(180deg); top: 0; left: 0;';
+        mobileMenu.classList.add('mobile-menu__active');
+        mobileDark.classList.add('mobile-menu__active');
+        console.log(mobileMenu.children)
+
+    }else if(event.target.classList.value=='header__content__mobile-menu_icon'&&mobileMenu.classList.value=='header__content__mobile-menu mobile-menu__active'){
+        event.target.style = 'transform: rotate(90deg); top: auto; left: 30px;';
+        mobileMenu.classList.remove('mobile-menu__active');
+        mobileDark.classList.remove('mobile-menu__active');
+        
+    }
+    console.log(mobileMenu.classList.value=='header__content__mobile-menu mobile-menu__active')
+    
 })
+
+
 
 let slider = document.querySelector('.slider');
 slider.addEventListener('click', (event)=>{
@@ -79,9 +99,6 @@ let popup = document.querySelector('.popup');
 let submitBtn = document.getElementById('submit-btn');
 let closeBtn = document.getElementById('close-btn');
 
-
-
-
  submitBtn.addEventListener('click', (event)=>{
     let inputName = document.getElementById('input-name');
     let inputMail = document.getElementById('input-mail');
@@ -100,3 +117,5 @@ let closeBtn = document.getElementById('close-btn');
 closeBtn.addEventListener('click', ()=>{
     popup.classList.remove('popup_active'); 
 })
+
+
