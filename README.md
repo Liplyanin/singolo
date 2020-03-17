@@ -1,1 +1,1 @@
-https://liplyanin.github.io/singolo/singolo1.html
+https://liplyanin.github.io/singolo/index.html
