@@ -207,6 +207,7 @@ body{
 }
 .slide2 img{
     width: 70%;
+    height: 70%;
 }
 .slide_active{
     display: flex;
@@ -672,21 +673,6 @@ input:invalid:not(:placeholder-shown) {
 .footer__content__network_item:hover{
     opacity: 1;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
