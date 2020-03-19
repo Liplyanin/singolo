@@ -12,7 +12,7 @@
         <div class="wrapper header__content">
             <div class="header__content_logo"><h1>singolo</h1><div>*</div></div>
             <div class="header__content__menu" id="menu">
-                <a href="#home"> <div class="header__content__menu_item">home</div></a>
+                <a href="#home"> <div class="header__content__menu_item active">home</div></a>
                 <div class="header__content__menu_dots" >.</div>
                 <a href="#services"> <div class="header__content__menu_item" > services</div></a>
                 <div class="header__content__menu_dots" >.</div>
@@ -39,15 +39,18 @@
          <div class="header_bottom-line"></div>
     </header>
     
-    <div class="slider">
+    <div class="slider" id="home">
         <div class="slider__content wrapper" >
-            <a name='home'></a>
             <div class="slider__content_vector" ><img src="./assets/chev_left.svg" alt="left" id="button_left"></div>
                 <div class="slide1 slide_active " id="slide1">
-                    <div class="black_screen1"></div>
-                    <div class="black_screen2"></div>
-                    <div class="slider__content_phone-vertical"><img src="./assets/iphone-vertical.png" alt="phone_vertical"></div>
-                    <div class="slider__content_phone-horizontal"><img src="./assets/iphone-horizontal.png" alt="phone_horizontal"></div>    
+                    <div class="slider__content_phone-vertical"> 
+                        <img src="./assets/iphone-vertical.png" alt="phoneOn" id="phone_vertical">
+                        <img src="./assets/phone-vertical.svg" alt="phoneOff" id="phone_vertical_black">
+                     </div>
+                    <div class="slider__content_phone-horizontal">
+                        <img src="./assets/iphone-horizontal.png" alt="phoneOn" id="phone_horisontal">
+                        <img src="./assets/phone-horisontal.svg" alt="phoneOff" id="phone_horisontal_black">
+                    </div>    
                 </div>
                 <div class="slide2" id="slide2"><img src="./assets/slide2.png" alt="slide"></div>
             <div class="slider__content_vector" ><img src="./assets/chev_r.svg" alt="right" id="button_right"></div>    
@@ -55,8 +58,7 @@
         <div class="slider_bottom-line"></div>
     </div>
 
-    <div class="services">
-        <a name='services'></a>
+    <div class="services" id="services">
         <div class="services__content wrapper">
             <div class="services__content_description"> 
                 <h2>Our Services</h2>
@@ -133,8 +135,7 @@
     </div>
 
     
-    <div class="portfolio">
-        <a name='portfolio'></a>
+    <div class="portfolio" id="portfolio">
         <div class="portfolio__content wrapper">
             <div class="portfolio__content__header">
                 <h2>Portfolio</h2>
@@ -164,8 +165,7 @@
         <div class="portfolio_bottom-line"></div>
     </div>
 
-    <div class="about-us">
-        <a name='about'></a>
+    <div class="about-us" id="about">
         <div class="about-us__header wrapper">
             <h2>About Us</h2>
             <div class="about-us__header_text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</div>
@@ -208,7 +208,7 @@
         <div class="about-us_bottom-line"></div>
     </div>
 
-    <div class="quota">
+    <div class="quota" id="contact">
         <div class="quota_description wrapper">
           <h2>Get a Quote</h2>
           <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi
@@ -237,7 +237,6 @@
 
               </div>
               <div class="quota__main__contact-info">
-                <a name='contact'></a>
                   <h3>Contact Information</h3>
                   <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viver-ra nibh. Fusce vitae aliquam tellus. Proin
                       sit
