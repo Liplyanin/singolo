@@ -43,8 +43,6 @@ header.addEventListener('click', (event)=>{
     }    
 })
 
-
-
 let slider = document.querySelector('.slider');
 let mainSlider = document.querySelector('.slider__content');
 slider.addEventListener('click', (event)=>{
@@ -54,41 +52,120 @@ slider.addEventListener('click', (event)=>{
     let slide1 = document.getElementById('slide1');
     let slide2 = document.getElementById('slide2');
     let bottomLine = document.querySelector('.slider_bottom-line');
-    if(event.target==buttonLeft||event.target==buttonRight){
-        activeSlide.classList.remove('slide_active');
-        if(activeSlide==slide1){
-            slide2.style = 'opacity: 0;';
-            slide2.classList.add('slide_active');
-            slider.style = 'background-color: #648BF0';
-            bottomLine.style = 'display: none';
-            let opasity = 0;
-            let intervalAnim = setInterval(function(){
-                if(opasity==1.0000000000000002){
-                    clearInterval(intervalAnim);
-                } else {
-                    opasity+=0.05;
-                    slide2.style = 'opacity:' + opasity;
-                }
-            }, 15);            
-        }else if(activeSlide==slide2){
-            slide1.style = 'opacity: 0;';
-            slide1.classList.add('slide_active');
-            slider.style = 'background-color: #f06c64';
-            bottomLine.style = 'display: block';
-            
-            let opasity = 0;
-            let intervalAnim = setInterval(function(){
-                if(opasity==1.0000000000000002){
-                    clearInterval(intervalAnim);
-                } else {
-                    opasity+=0.05;
-                    slide1.style = 'opacity:' + opasity; 
-                }
-                
-            }, 15);
-        }
-    } 
 
+    
+    if(event.target==buttonLeft){
+        let opacity = 1;
+        let right = 0;
+        let interval = setInterval(function(){
+            if(opacity==0.5) opacity+=0.1;
+            if(right==100){
+                clearInterval(interval);
+                activeSlide.style  = 'display: none;'                        
+                    if(activeSlide==slide1){
+                        activeSlide.classList.remove('slide_active');
+                        slide2.style = 'position: relative; left: 100%';
+                        bottomLine.style = 'display: none';
+                        let left = 100;
+                        let opacity = 0.5;
+                        let interval2 =setInterval(function(){
+                            
+                            if(left==0){
+                                clearInterval(interval2);
+                                slider.style = 'background-color: #648BF0;'; 
+                                slide2.classList.add('slide_active');
+                                slide2.style = '';
+                            } else {
+                                opacity+=0.2;
+                                left-=10;
+                                slide2.style  = 'position: relative; left:' + left +'%';
+                                slider.style.cssText += 'background-color: #648BF0; opacity:' + opacity;
+                            }
+                        }, 10); 
+                        slide2.classList.add('slide_active'); 
+                    }
+                    if(activeSlide==slide2){
+                        activeSlide.classList.remove('slide_active');
+                        slide1.style = 'position: relative; left: 100%';
+                        bottomLine.style = 'display: none';
+                        let left = 100;
+                        let interval2 =setInterval(function(){
+                            if(left==0){
+                                clearInterval(interval2);
+                                slide1.classList.add('slide_active');
+                                slide1.style = '';
+                            } else {
+                                left-=10;
+                                slide1.style  = 'position: relative; left:' + left +'%';
+                            }
+                        }, 10); 
+                        slide2.classList.add('slide_active');
+                        slider.style = 'background-color: #f06c64';                         
+                    }
+            } else {          
+                opacity-=0.02;      
+                right+=10;
+                activeSlide.style  = 'position: relative; right:' + right +'%';
+                slider.style.cssText += 'opacity:' + opacity;
+            }
+        }, 10);    
+    }else if(event.target==buttonRight){
+        let opacity = 1;
+        let left = 0;
+        let interval = setInterval(function(){
+            if(opacity==0.5) opacity+=0.1;
+            if(left==100){
+                clearInterval(interval);
+                activeSlide.style  = 'display: none;'                        
+                    if(activeSlide==slide1){
+                        activeSlide.classList.remove('slide_active');
+                        slide2.style = 'position: relative; right: 100%';
+                        bottomLine.style = 'display: none';
+                        let right = 100;
+                        let opacity = 0.5;
+                        let interval2 =setInterval(function(){
+                            
+                            if(right==0){
+                                clearInterval(interval2);
+                                slider.style = 'background-color: #648BF0;'; 
+                                slide2.classList.add('slide_active');
+                                slide2.style = '';
+                            } else {
+                                opacity+=0.2;
+                                right-=10;
+                                slide2.style  = 'position: relative; right:' + right +'%';
+                                slider.style.cssText += 'background-color: #648BF0; opacity:' + opacity;
+                            }
+                        }, 10); 
+                        slide2.classList.add('slide_active'); 
+                    }
+                    if(activeSlide==slide2){
+                        activeSlide.classList.remove('slide_active');
+                        slide1.style = 'position: relative; left: 100%';
+                        bottomLine.style = 'display: none';
+                        let left = 100;
+                        let interval2 =setInterval(function(){
+                            
+                            if(left==0){
+                                clearInterval(interval2);
+                                slide1.classList.add('slide_active');
+                                slide1.style = '';
+                            } else {
+                                left-=10;
+                                slide1.style  = 'position: relative; left:' + left +'%';
+                            }
+                        }, 10); 
+                        slide2.classList.add('slide_active');
+                        slider.style = 'background-color: #f06c64';                         
+                    }
+            } else {          
+                opacity-=0.02;      
+                left+=10;
+                activeSlide.style  = 'position: relative; left:' + left +'%';
+                slider.style.cssText += 'opacity:' + opacity;
+            }
+        }, 10);    
+    }  
 
     if(event.target.alt == 'phoneOn'){
         event.target.style = 'display: none';
