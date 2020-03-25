@@ -208,67 +208,70 @@
         <div class="about-us_bottom-line"></div>
     </div>
 
-    <div class="quota" id="contact">
-        <div class="quota_description wrapper">
-          <h2>Get a Quote</h2>
-          <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi
-            erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-            condimentum nibh.</p>
+    <div class="quota_background">
+        <div class="quota wrapper" id="contact">
+            <div class="quota_description ">
+            <h2>Get a Quote</h2>
+            <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi
+                erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                condimentum nibh.</p>
+            </div>
+
+            <div class="quota__main ">
+                <div class="quota__main_form">
+                    <form action="#" >
+                        <input id="input-name" type="text" name="name" placeholder="Name (Required)" required>
+                        <input id="input-mail" type="email" name="email" placeholder="Email (Required)" required>
+                        <input id="input-subject" type="text" name="subject" placeholder="Subject" >
+                        <textarea id="describe-area" name="describe" placeholder="Describe your project in detail..." cols="40" rows="10"></textarea>
+                        <button type="submit" id="submit-btn">SEND</button>
+                    </form>
+
+                    <div class="popup ">
+                        <div class="popup_message">
+                            <p>The letter was sent </p>
+                            <span id="subject"></span>
+                            <span id="describe"></span>     
+                            <button id="close-btn">OK</button>                   
+                        </div>                     
+                    </div>
+
+                </div>
+                <div class="quota__main__contact-info">
+                    <h3>Contact Information</h3>
+                    <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viver-ra nibh. Fusce vitae aliquam tellus. Proin
+                        sit
+                        amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.
+                    </p>
+
+                    <div class="quota__main__contact-info__contacts">
+                        <div class="quota__main__contact-info__contacts_item">
+                            <a href="https://www.google.com/maps/">
+                            <img src="./assets/location.png" alt="contact">
+                            <div>Elm St. 14/05 Lost City</div>
+                            </a>
+                        </div>
+                        
+                        <div class="quota__main__contact-info__contacts_item">
+                            <a href="tel:03528 331 86 35">
+                            <img src="./assets/phone_old.png" alt="contact">
+                            <div>03528 331 86 35</div>
+                            </a>
+                        </div>
+                        
+                        <div class="quota__main__contact-info__contacts_item">
+                            <a href="mailto:info@singolo.com">
+                            <img src="./assets/mail.png" alt="contact">
+                            <div>info@singolo.com</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>  
+            </div>
         </div>
+        <div class="quota_bottom-line"></div>
 
-        <div class="quota__main wrapper">
-              <div class="quota__main_form">
-                  <form action="#" >
-                      <input id="input-name" type="text" name="name" placeholder="Name (Required)" required>
-                      <input id="input-mail" type="email" name="email" placeholder="Email (Required)" required>
-                      <input id="input-subject" type="text" name="subject" placeholder="Subject" >
-                      <textarea id="describe-area" name="describe" placeholder="Describe your project in detail..." cols="40" rows="10"></textarea>
-                      <button type="submit" id="submit-btn">SEND</button>
-                  </form>
-
-                  <div class="popup ">
-                      <div class="popup_message">
-                          <p>The letter was sent </p>
-                          <span id="subject"></span>
-                          <span id="describe"></span>     
-                          <button id="close-btn">OK</button>                   
-                      </div>                     
-                  </div>
-
-              </div>
-              <div class="quota__main__contact-info">
-                  <h3>Contact Information</h3>
-                  <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viver-ra nibh. Fusce vitae aliquam tellus. Proin
-                      sit
-                      amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.
-                  </p>
-
-                  <div class="quota__main__contact-info__contacts">
-                      <div class="quota__main__contact-info__contacts_item">
-                          <a href="https://www.google.com/maps/">
-                          <img src="./assets/location.png" alt="contact">
-                          <div>Elm St. 14/05 Lost City</div>
-                          </a>
-                      </div>
-                      
-                      <div class="quota__main__contact-info__contacts_item">
-                          <a href="tel:03528 331 86 35">
-                          <img src="./assets/phone_old.png" alt="contact">
-                          <div>03528 331 86 35</div>
-                          </a>
-                      </div>
-                      
-                      <div class="quota__main__contact-info__contacts_item">
-                          <a href="mailto:info@singolo.com">
-                          <img src="./assets/mail.png" alt="contact">
-                          <div>info@singolo.com</div>
-                          </a>
-                      </div>
-                  </div>
-              </div>  
-          </div>
-          <div class="quota_bottom-line"></div>
-  </div>
+    </div>
 
   <footer class="footer">
       <div class="footer__content wrapper">
