@@ -172,8 +172,7 @@ body{
     overflow: hidden;
 }
 .slider__content_vector{
-    width: 1.56%;
-    margin: 4.11%;
+    margin: 3.11%;
 }
 .slider__content_vector:hover{
     cursor: pointer;
@@ -705,10 +704,10 @@ input:invalid:not(:placeholder-shown) {
         height: auto;
     }
     .slider__content_phone-vertical img{
-        width: 92.5%;
+        width: 97%;
     }
     .slider__content_phone-horizontal img{
-        width: 92.5%;
+        width: 97%;
     }
 }
 
@@ -822,7 +821,7 @@ input:invalid:not(:placeholder-shown) {
    
     .slider__content_phone-horizontal{
         padding-top: 100px;
-        padding-right: 15px;
+        padding-right: 0;
     }
     .slider__content_phone-vertical{
         padding-right: 40px;

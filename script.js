@@ -26,18 +26,22 @@ header.addEventListener('click', (event)=>{
     if (event.target.classList.value=='header__content__menu_item') {
         event.target.classList.add('active');
         if(mobileMenu.classList.value=='header__content__mobile-menu mobile-menu__active') {
-            document.querySelector('.header__content__mobile-menu_icon').style = 'transform: rotate(90deg); top: auto; left: 30px;';
+            document.querySelector('.header__content__mobile-menu_icon').style = 'transform: rotate(90deg)';
+            document.querySelector('body').style = 'position: relative;';
             header.querySelectorAll('div').forEach(el=> el.classList.remove('mobile-menu__active'));
         }
     }
 
     if (event.target.classList.value=='header__content__mobile-menu_icon' && mobileMenu.classList.value=='header__content__mobile-menu') {
-        event.target.style = 'transform: rotate(180deg); top: 0; left: 0;';
+        event.target.style = 'transform: rotate(180deg); margin-left: -10px;';
+        document.querySelector('body').style = 'overflow: hidden';
         mobileMenu.classList.add('mobile-menu__active');
         mobileDark.classList.add('mobile-menu__active');
     }else if(event.target.classList.value=='header__content__mobile-menu_icon'&&mobileMenu.classList.value=='header__content__mobile-menu mobile-menu__active'){
         event.target.style = 'transform: rotate(90deg); top: auto; left: 30px;';
         header.querySelectorAll('div').forEach(el=> el.classList.remove('mobile-menu__active'));
+        document.querySelector('body').style = 'position: relative;';
+
    
         
     }    
@@ -231,7 +235,8 @@ let describe = document.getElementById('describe');
  submitBtn.addEventListener('click', (event)=>{
  
     if (inputName.validity.valid&&inputMail.validity.valid) {
-        popup.classList.add('popup_active');   
+        popup.classList.add('popup_active'); 
+        document.querySelector('body').style = 'overflow: hidden';
         (document.getElementById('input-subject').value=='')? subject.innerText = 'Without subject  ' : 
              subject.innerText = 'Subject:   ' + document.getElementById('input-subject').value;
         (document.getElementById('describe-area').value=='')? describe.innerText = 'Without description  ' :  
@@ -241,6 +246,7 @@ let describe = document.getElementById('describe');
     }    
 })
 closeBtn.addEventListener('click', ()=>{
+    document.querySelector('body').style = 'position: relative;';
     popup.classList.remove('popup_active'); 
     inputName.value = '';
     inputMail.value = '';
