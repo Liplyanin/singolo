@@ -155,8 +155,6 @@ body{
 
 }
 
-
-
 .slider{
     margin-top: 95px;
     height: 600px;
@@ -365,8 +363,8 @@ body{
     border-color: #c5c5c5;
 }
 .portfolio_menu_active{
-    color: white;
-    border-color: white;
+    color: #f06c64;
+    border-color: #f06c64;
 }
 .portfolio__content__photos{
     display: flex;

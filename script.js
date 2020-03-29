@@ -190,12 +190,12 @@ slider.addEventListener('click', (event)=>{
 let portfolio = document.querySelector('.portfolio__content');
 let photo = document.querySelector('.portfolio__content__photos');
 portfolio.addEventListener('click',(event)=>{
-    portfolio.querySelectorAll('div').forEach(el=> el.classList.remove('portfolio_menu_active'));
     portfolio.querySelectorAll('img').forEach(el=> {
         el.classList.remove('photo_active') ; 
         el.style = 'margin: 9px';
     });
     if(event.target.classList.value=='portfolio__content__header_buttons_item') {
+        portfolio.querySelectorAll('div').forEach(el=> el.classList.remove('portfolio_menu_active'));
         event.target.classList.add('portfolio_menu_active');
 
         let arr = [];
@@ -237,9 +237,9 @@ let describe = document.getElementById('describe');
     if (inputName.validity.valid&&inputMail.validity.valid) {
         popup.classList.add('popup_active'); 
         document.querySelector('body').style = 'overflow: hidden';
-        (document.getElementById('input-subject').value=='')? subject.innerText = 'Without subject  ' : 
+        (document.getElementById('input-subject').value=='')? subject.innerText = 'Without subject' : 
              subject.innerText = 'Subject:   ' + document.getElementById('input-subject').value;
-        (document.getElementById('describe-area').value=='')? describe.innerText = 'Without description  ' :  
+        (document.getElementById('describe-area').value=='')? describe.innerText = 'Without description' :  
               describe.innerText = 'Description:   ' + document.getElementById('describe-area').value;
 
         event.preventDefault()
@@ -250,8 +250,8 @@ closeBtn.addEventListener('click', ()=>{
     popup.classList.remove('popup_active'); 
     inputName.value = '';
     inputMail.value = '';
-    document.getElementById('input-subject').value = ' ';
-    document.getElementById('describe-area').value = ' ';
+    document.getElementById('input-subject').value = '';
+    document.getElementById('describe-area').value = '';
     
 })
 
